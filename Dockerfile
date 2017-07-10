@@ -14,3 +14,7 @@ ENV GOPATH=/go
 
 ENV CGO_CFLAGS="-I /usr/local/cuda-8.0/targets/x86_64-linux/include"
 ENV CGO_LDFLAGS="-L /usr/local/cuda-8.0/targets/x86_64-linux/lib"
+
+ADD . /build
+
+ENTRYPOINT /build/build.sh
